@@ -1,0 +1,2015 @@
+/* -------------------------------------------------------------------------- */
+/*                                     ALL                                    */
+/* -------------------------------------------------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "GangOfThree";
+    src: url("../../fonts/go3v2.ttf");
+}
+
+.btn:hover {
+    background: white;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 0.25rem;
+    border: 0.5px solid white;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    color: white;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+canvas {
+    display: block;
+    background:#1a1a1a;
+}
+
+li {
+    list-style: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  SCROLLBAR                                 */
+/* -------------------------------------------------------------------------- */
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: #3b3b3b;
+}
+::-webkit-scrollbar-thumb {
+    background: #810505;
+    border-radius: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    GOTOP                                   */
+/* -------------------------------------------------------------------------- */
+
+#btnTop {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+
+    img {
+        width: 25px;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 320px) { 
+
+    header {
+        height: 440px;
+        width: 100%;
+        background-image: url('../../img/bg-header_mobile.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        #logo {
+            width: 250px;
+            height: 92px;
+            padding-top: 35px;
+            position: relative;
+    
+            img {
+                width: 100%;
+                height: 70px;
+                margin: auto;
+            }
+
+            a {
+                width: 250px;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+/* -------------------------------------------------------------------------- */
+/*                                  NAV MOBILE                                */
+/* -------------------------------------------------------------------------- */
+
+        #navMobile {
+            text-align: center;
+            display: flex;
+            margin: 30px 0 0 0;
+
+
+            #btnMenu:hover {
+                background: #1a1a1a;           
+            }
+
+            #btnMenu {
+                height: 50px;
+                width: 50px;
+                font-size: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.4s ease-in-out;
+
+                img {
+                    width: 25px;
+                    margin: 10px;
+                }
+            }
+        }
+
+        #fullMenu {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(26, 26, 26, 0.9);
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            #closeFullMenu {
+                height: 30px;
+                width: 30px;
+                float: right;
+                background-color: rgba(238, 130, 238, 0);
+                border: none;
+                margin: 30px 50px;
+                cursor: pointer;
+                align-self: flex-end;
+                position: absolute;
+                top: 0;
+                z-index: -100;
+
+                img {
+                    cursor: pointer;
+                }
+            }
+
+            ul {
+                font-size: 30px;
+                height: 250px;
+                text-align: center;
+                font-weight: 100;
+
+                li {
+                    height: 65px;
+
+                    a:hover {
+                        opacity: 0.3;
+                    }
+
+                    a {
+                        font-weight: 400;
+                        height: 65px;
+                        transition: 0.4s ease-in-out;
+                    }
+                }
+            }
+
+            #socialMedia {
+                margin-top: 5px;
+
+                a:hover {
+                    opacity: 0.3;
+                }
+
+                a {
+                    margin: 5px;
+                    height: 45px;
+                    transition: ease-in-out 0.4s;
+
+                    img {
+                        height: 45px;
+                    }
+                }
+            }
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                 NAV DESKTOP                                */
+/* -------------------------------------------------------------------------- */
+
+    #subNav {
+        margin: 0 auto;
+        width: 100%;
+        height: 105px;
+        background-color: #242424;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+
+        #btnDynMobile:hover {
+            color: #242424;
+        }
+
+        #btnDynMobile {
+            height: 40px;
+            width: 100px;
+            margin-top: 20px;
+            font-size: 15px;
+            display: inline-block;
+            color: white;
+            transition: all 0.4s ease-in-out;
+            padding: 5px;
+            line-height: 2;
+        }
+
+        .btnSubNav {
+            display: none;
+        }
+    }
+
+    #subNav::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: -5%;
+        left: -5%;
+        height: 120px;
+        background: #1a1a1a;
+        -webkit-clip-path: ellipse(50% 60% at 50% 100%);
+        clip-path: ellipse(50% 20% at 50% 100%);
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                  CONTAINER                                 */
+/* -------------------------------------------------------------------------- */
+
+    #category {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        background:#1a1a1a;
+        padding-bottom: 20px;
+
+        .cardRange {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+        }
+
+/* ---------------------------------- TITLE --------------------------------- */
+
+        .sectionTitle {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+
+            h1 {
+                width: 100%;
+                color: white;
+                margin-top: 10px;
+                margin-bottom: 15px;
+                z-index: 10;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .hrWhite {
+                z-index: 10;
+                height: 1px;
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+                width: 150px;
+                text-align: center;
+                margin-bottom: 35px;
+            }
+
+            hr {
+                border: none;
+            }
+        }
+
+/* -------------------------------- PARTICLES ------------------------------- */
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+/* --------------------------------- FIGURES -------------------------------- */
+
+        figure {
+            display: flex;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.2em;
+            font-family: 'GangOfthree', sans-serif, Arial;
+            position: relative;
+            transform-style: preserve-3d; 
+    
+            a {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background-color: #151515;
+                opacity: 0.5;
+            }
+    
+            figcaption {
+                transform: translateZ(60px);
+                font-family: "GangOfthree", Arial, sans-serif;
+                cursor: pointer;
+            }
+
+            .centerCard {
+                text-align: center;
+            }
+        }
+
+        #figSushi {
+            background-image: url("../../img/bowl_card.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 288px;
+            height: 415px;
+            margin: 14px 20px 25px 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+        }
+
+        #figTaco {
+            background-image: url("../../img/accompagnement_card.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 288px;
+            height: 415px;
+            margin: 14px 14px 25px 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+            font-size: 24px;
+        }
+
+        #figBowls {
+            background-image: url("../../img/dessert_card.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 288px;
+            height: 415px;
+            margin: 14px 14px 25px 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+        }
+
+        #figBox {
+            background-image: url("../../img/boxMobile_card.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 288px;
+            height: 415px;
+            margin: 14px 14px 25px 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+        }
+
+        #figMenu {
+            background-image: url("../../img/menuMobile_card.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 288px;
+            height: 415px;
+            margin: 14px 14px 25px 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                   CONTACT                                  */
+/* -------------------------------------------------------------------------- */
+
+    #contact {
+        background: #1a1a1a;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0% 0 0%;
+
+        .sectionTitle {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-bottom: 10px;
+
+            h1 {
+                width: 100%;
+                color: white;
+                margin-bottom: 15px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            hr {
+                border: none;
+            }
+
+            .hrWhite {
+                height: 1px;
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+                width: 150px;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+        }
+
+        .containerContact {
+            width: 1200px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+
+            #contactAdress {
+                height: auto;
+                max-width: 350px;
+                background-color: #242424;
+                position: relative;
+                flex-wrap: wrap;
+                text-align: center;
+                color: white;
+
+                #arrow {
+                    top: -40px;
+                    position: absolute;
+                    border-left: 30px solid transparent;
+                    border-right: 30px solid transparent;
+                    border-bottom: 50px solid #242424;
+                }
+            }
+
+            article {
+                margin: 30px auto;
+                width: 300px;
+                background: #242424;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+
+                iframe {
+                    margin-bottom: 20px;
+                    border: none;
+                }
+
+                p {
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    text-align: center;
+                    margin: 25px 0 15px 0;
+                }
+
+                a:hover {
+                    color: #151515;
+                }
+
+                a {
+                    margin: 0 auto;
+                    color: white;
+                }
+
+                .redirection {
+                    font-size: 12px;
+                }
+
+                .livraison {
+                    color: rgb(220, 20, 20);
+                }
+            }
+
+            #contactOuverture {
+                max-width: 550px;
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                padding: 10px 0 15px 0;
+
+                ul {
+                    margin: 0 0 0 40px;
+
+                    li{
+                        list-style: square;
+                        color: white;
+                        opacity: 0.6;
+                    }
+                }
+
+                p {
+                    text-align: start;
+                    margin: 20px 10px 10px 20px;
+                    line-height: 22px;
+                }
+
+                .horaires {
+                    opacity: 0.6;
+                    margin: 5px 0 5px 0;
+                }
+            }
+        }
+    }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   GALLERY                                  */
+/* -------------------------------------------------------------------------- */
+
+    #gallery {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-flow: column;
+        background: #1a1a1a;
+        padding-bottom: 50px;
+        padding-top: 10px;
+
+
+        .sectionTitle {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-bottom: 25px;
+
+            h1 {
+                width: 100%;
+                color: white;
+                margin-bottom: 15px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            hr {
+                border: none;
+            }
+
+            .hrWhite {
+                height: 1px;
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+                width: 150px;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+        }
+
+        .cardGallery {
+            overflow: hidden;
+            filter: drop-shadow(3px 3px 12px);
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            .cardText:hover {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+
+            .cardText {
+                transition: 0.4s linear;
+                position: absolute;
+                margin: 0 10%;
+                width: 80%;
+                height: calc(100% - 0.1%);
+                z-index: 10;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-wrap: wrap;
+                align-content: center;
+                background-color: #242424;
+                opacity: 0;
+                color: white;
+                
+                h2 {
+                    width: 100%;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 14px;
+                    padding: 5px 0px;
+                    font-family: 'Roboto', sans-serif;
+
+                }
+            }
+    
+            .img1 {
+                width: 80%;
+                height: auto;
+                border-radius: 3px;
+                z-index: 5;
+                margin: 0.5%;
+            }
+
+            .img2 {
+                width: 80%;
+                height: auto;
+                border-radius: 3px;
+                z-index: 5;
+                margin: 0.5%;
+            }
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                              GALLERY LIGHTBOX                              */
+/* -------------------------------------------------------------------------- */
+
+    #fullScreen {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #3b3b3ba9;
+        z-index: 100;
+        opacity: 1;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        .absolute{
+            position: absolute;
+            position: fixed;
+            height: 80%;
+            width: 100%;
+            max-width: 70%;
+            object-fit: contain;
+        }
+    
+        #closeBox {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+        }
+    
+        #leftBox {
+            position: absolute;
+            left: 20px;
+            cursor: pointer;
+            height: 25px;
+        }
+    
+        #rightBox {
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            height: 25px;
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    ABOUT                                   */
+/* -------------------------------------------------------------------------- */
+
+    #about1 {
+        border-right: 2px solid #810505;
+        border-bottom: 2px solid #810505;
+        position: relative;
+    }
+
+    #about2 {
+        border-left: 2px solid #810505;
+        border-bottom: 2px solid #810505;
+        position: relative;
+    }
+
+    #about3 {
+        border-right: 2px solid #810505;
+        border-bottom: 2px solid #810505;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    #about1::before {
+        font-family: 'Roboto', sans-serif;
+        content: "1";
+        position: absolute;
+        border-radius: 50%;
+        padding: 10px;
+        height: 17px;
+        width: 17px;
+        background-color: #242424;
+        text-align: center;
+        line-height: 17px;
+        color: #ffffff;
+        font-size: 16px;
+        right: -20px;
+        bottom: calc(50% - 17px);
+        filter: drop-shadow(2px 2px 12px black);
+    }
+
+    #about2::before {
+        font-family: 'Roboto', sans-serif;
+        content: "2";
+        position: absolute;
+        border-radius: 50%;
+        padding: 10px;
+        height: 17px;
+        width: 17px;
+        background-color: #242424;
+        text-align: center;
+        line-height: 17px;
+        color: #ffffff;
+        font-size: 16px;
+        left: -20px;
+        bottom: calc(50% - 17px);
+        filter: drop-shadow(2px 2px 12px black);
+    }
+
+    #about3::before {
+        font-family: 'Roboto', sans-serif;
+        content: "3";
+        position: absolute;
+        border-radius: 50%;
+        padding: 10px;
+        height: 17px;
+        width: 17px;
+        background-color: #242424;
+        text-align: center;
+        line-height: 17px;
+        color: #ffffff;
+        font-size: 16px;
+        right: -20px;
+        bottom: calc(50% - 17px);
+        filter: drop-shadow(2px 2px 12px black);
+    }
+
+    .about {
+        width: 80%;
+        margin: auto;
+        padding: 40px 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img {
+            width: 80%;
+            height: auto;
+            border-radius: 5px;
+            filter: drop-shadow(3px 3px 12px);
+            margin: 15px 0;
+        }
+
+        p {
+            width: 80%;
+            color: #F8F8F8;
+            word-break: break-all;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            line-height: 20px;
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                   SUSHIS                                   */
+/* -------------------------------------------------------------------------- */
+
+    #products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        margin: auto;
+        background: #1a1a1a;
+        padding: 0 10% 20px 10%;
+
+        .sushiTitle {
+            padding: 40px 0 0 0;
+        }
+
+        .sectionTitle {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            margin: 10px 0 25px 0px;
+
+            h1 {
+                width: 100%;
+                color: white;
+                margin-bottom: 15px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            h2 {
+                width: 100%;
+                color: white;
+                margin-bottom: 15px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 24px;
+            }
+
+            .hrWhite {
+                height: 1px;
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+                width: 150px;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            hr {
+                border: none;
+            }
+        }
+
+        .cardProduct {
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            background: #242424;
+            filter: drop-shadow(2px 2px 8px black);
+            border-radius: 8px;
+            margin: 0px 0px 20px 0px;
+            padding: 0 0 10px 0;
+
+            .centerCard {
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                width: 100%;
+
+                img {
+                    height: 150px;
+                    width: 150px;
+                    margin: 20px auto;
+                    filter: drop-shadow(2px 2px 13px black);
+                }
+    
+                h3 {
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    padding: 5px 10px 0 10px;
+                }
+    
+                span {
+                    color: rgb(300, 27, 27);
+                    font-family: 'Roboto', sans-serif;
+                    padding: 12px 10px;
+                    font-size: 17px;
+                }
+    
+                ul {
+                    width: 100%;
+    
+                    li {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 3px 10px;
+    
+                        p {
+                            color: white;
+                            font-family: 'Roboto', sans-serif;
+                        }
+                    }
+                }
+            }
+
+            .intelligence {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                padding: 5px 10px 0px 10px;
+            }
+
+            .taco {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                padding: 8px 10px 0px 10px;
+                font-size: 20px;
+                text-align: end;
+                width: 100%;
+            }
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    TACO                                    */
+/* -------------------------------------------------------------------------- */
+
+    #products {
+
+        .cardProductTaco {
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            background: #242424;
+            filter: drop-shadow(2px 2px 8px black);
+            border-radius: 8px;
+            margin: 0px 0px 20px 0px;
+            padding: 0 0 10px 0;
+
+            .centerCard {
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                width: 100%;
+
+                img {
+                    height: 150px;
+                    width: 150px;
+                    margin: 20px auto;
+                    filter: drop-shadow(2px 2px 13px black);
+                }
+
+                h3 {
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    padding: 5px 10px 0 10px;
+                }
+
+                ul {
+                    width: 100%;
+
+                    li {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10px 10px;
+
+                        p {
+                            color: white;
+                            font-family: 'Roboto', sans-serif;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+
+            .center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 100%;
+                width: 100%;
+                padding: 10px 0 0px 0;
+
+                h3 {
+                    font-size: 22px;
+                    padding: 10px 0 10px 0;
+                }
+            }
+
+            .intelligence {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                padding: 5px 10px 0px 10px;
+            }
+
+            .taco {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                padding: 8px 10px 0px 10px;
+                font-size: 20px;
+                text-align: end;
+                width: 100%;
+            }
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    BOX                                     */
+/* -------------------------------------------------------------------------- */
+
+    #products {
+
+        .cardProductBox {
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            background: #242424;
+            filter: drop-shadow(2px 2px 8px black);
+            border-radius: 8px;
+            margin: 0px 0px 20px 0px;
+            padding: 0 0 10px 0;
+
+            .centerCard {
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                width: 100%;
+
+                span {
+                    color: rgb(300, 27, 27);
+                    font-family: 'Roboto', sans-serif;
+                    padding: 12px 10px;
+                    font-size: 17px;
+                }
+
+                img {
+                    height: 150px;
+                    width: 150px;
+                    margin: 20px auto;
+                    filter: drop-shadow(2px 2px 13px black);
+                }
+
+                h3 {
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    padding: 5px 10px 0 10px;
+                }
+
+                ul {
+                    width: 100%;
+
+                    li {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 3px 10px;
+
+                        p {
+                            color: white;
+                            font-family: 'Roboto', sans-serif;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+
+            .intelligence {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                padding: 5px 10px 0px 10px;
+            }
+
+            .taco {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                padding: 8px 10px 0px 10px;
+                font-size: 20px;
+                text-align: end;
+                width: 100%;
+            }
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    MENU                                    */
+/* -------------------------------------------------------------------------- */
+
+    #products {
+
+        .cardProductMenu {
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            background: #242424;
+            filter: drop-shadow(2px 2px 8px black);
+            border-radius: 8px;
+            margin: 0px 0px 20px 0px;
+            padding: 0 0 10px 0;
+
+            .centerCard {
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                width: 100%;
+
+                span {
+                    color: rgb(300, 27, 27);
+                    font-family: 'Roboto', sans-serif;
+                    padding: 12px 10px;
+                    font-size: 17px;
+                }
+
+                img {
+                    height: 150px;
+                    width: 150px;
+                    margin: 20px auto;
+                    filter: drop-shadow(2px 2px 13px black);
+                }
+
+                h3 {
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    padding: 5px 10px 0 10px;
+                }
+
+                ul {
+                    width: 100%;
+                    padding: 8px 0 3px 0;
+
+                    li {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 3px 10px;
+
+                        p {
+                            color: white;
+                            font-family: 'Roboto', sans-serif;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+
+            .intelligence {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                padding: 5px 10px 0px 10px;
+            }
+
+            .taco {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                padding: 8px 10px 0px 10px;
+                font-size: 20px;
+                text-align: end;
+                width: 100%;
+            }
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+    footer {
+        margin: 0 auto;
+        width: 100%;
+        background-color: #242424;
+        position: relative;
+        overflow: hidden;
+
+/* -------------------------------- PREFOOTER ------------------------------- */
+
+        #prefooter {
+            margin: 40px auto;
+            width: 100%;
+            text-align: center;
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            article {
+                width: 100%;
+            }
+
+            #footerLogo {
+                margin-top: 20px;
+            }
+
+            img {
+                width: 250px;
+                height: 60px;
+            }
+
+            #footerSocialMedia {
+                margin-top: 10px;
+
+                a {
+                    transition: 0.4s ease-in-out;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        margin: 15px;
+                        transition: ease-in-out 0.4s;
+                    }
+
+                    img:hover {
+                        opacity: .4;
+                    }
+                }
+            }
+
+            .center {
+                text-align: center;
+            }
+        }
+
+        #prefooter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -5%;
+            left: -5%;
+            height: 120px;
+            background: #1a1a1a;
+            -webkit-clip-path: ellipse(50% 60% at 50% 100%);
+            clip-path: ellipse(50% 20% at 50% 0%);
+        }
+
+        #prefooter::after {
+            content: '';
+            position: absolute;
+            top: 130px;
+            right: -5%;
+            left: -5%;
+            height: 120px;
+            background: #151515;
+            clip-path: ellipse(50% 20% at 50% 100%);
+            -webkit-clip-path: ellipse(50% 20% at 50% 100%);
+        }
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+        #footer {
+            width: 100%;
+            color: white;
+            background-color: #151515;
+            height: 100px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 1px;
+            z-index: 100;
+
+            span {
+                width: 100%;
+                margin: 5px;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+    }
+
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                  TABLETTE                                  */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) { 
+
+/* -------------------------------------------------------------------------- */
+/*                                  CONTAINER                                 */
+/* -------------------------------------------------------------------------- */
+
+#category {
+
+    #figBox {
+        background-image: url("../../img/boxTablette_card.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 616px;
+        height: 273px;
+        margin: 14px 14px 25px 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+    }
+
+    #figMenu {
+        background-image: url("../../img/menuTablette_card.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 616px;
+        height: 273px;
+        margin: 14px 14px 25px 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   CONTACT                                  */
+/* -------------------------------------------------------------------------- */
+
+    #contact {
+        background: #1a1a1a;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 5% 0px 5%;
+
+        .containerContact {
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+
+            #contactAdress {
+                height: auto;
+                max-width: 350px;
+                background-color: #242424;
+                position: relative;
+                flex-wrap: wrap;
+                text-align: center;
+                color: white;
+
+                #arrow {
+                    left: -40px;
+                    top: calc((100% - 60px) / 2);
+                    transform: rotate(270deg);
+                }
+            }
+
+            article {
+                margin: 30px 30px;
+                width: 50%;
+                max-width: 450px;
+                background: #242424;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;         
+
+                p {
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    text-align: center;
+                    margin: 20px 0 20px 0;
+                    line-height: 22px;
+                }
+
+                a {
+                    margin: 0 auto;
+                }
+
+                .redirection {
+                    font-size: 12px;
+                }
+            }
+
+            #contactOuverture {
+                max-width: 550px;
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                padding: 10px 0 15px 0;
+
+                ul {
+                    margin: 0 0 0 50px;
+
+                    li{
+                        list-style: square;
+                        color: white;
+                        opacity: 0.6;
+
+                        .horaires {
+                            opacity: 0.6;
+                            margin: 5px 0 5px 0;
+                        }
+                    }
+                }
+
+                p {
+                    text-align: start;
+                    margin: 20px 10px 10px 20px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                   GALLERY                                  */
+/* -------------------------------------------------------------------------- */
+
+    #gallery {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-flow: row wrap;
+        background: #1a1a1a;
+
+        .cardGallery {
+            overflow: hidden;
+            filter: drop-shadow(3px 3px 12px);
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+
+            .cardText:hover {
+                opacity: 0.8;
+            }
+
+            .cardText {
+                transition: 0.4s linear;
+                position: absolute;
+                margin: 0;
+                width: 72.7%;
+                height: calc(100% - 4.5px);
+                z-index: 15;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-wrap: wrap;
+                align-content: center;
+                background-color: #242424;
+                opacity: 0;
+                color: white;
+                
+                h2 {
+                    width: 100%;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 14px;
+                    padding: 5px 20px;
+                    font-family: 'Roboto', sans-serif;
+
+                }
+            }
+
+            .card1 {
+                margin: 0 0 1% 26.2%;
+            }
+
+            .card2 {
+                margin: 0 0 1% 1.2%;
+            }
+
+            .img1 {
+                width: 72.5%;
+                height: auto;
+                border-radius: 3px;
+                z-index: 5;
+                margin: 0 0 1% 25%;
+            }
+
+            .img2 {
+                width: 72.5%;
+                height: auto;
+                border-radius: 3px;
+                z-index: 5;
+                margin: 0 25% 1% 0;
+            }
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                              GALLERY LIGHTBOX                              */
+/* -------------------------------------------------------------------------- */
+
+    #fullScreen {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #3b3b3ba9;
+        z-index: 100;
+        opacity: 1;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        .absolute{
+            position: absolute;
+            position: fixed;
+            height: 80%;
+            width: 100%;
+            max-width: 70%;
+            object-fit: contain;
+        }
+
+        #closeBox {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+        }
+
+        #leftBox {
+            position: absolute;
+            left: 40px;
+            cursor: pointer;
+            height: 35px;
+        }
+
+        #rightBox {
+            position: absolute;
+            right: 40px;
+            cursor: pointer;
+            height: 35px;
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    ABOUT                                   */
+/* -------------------------------------------------------------------------- */
+
+    .about {
+        
+        img {
+            width: 80%;
+        }
+
+        p {
+            width: 80%;
+        }
+    }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   SUSHIS                                   */
+/* -------------------------------------------------------------------------- */
+
+    #products {
+        
+        .cardProduct {
+            width: 48%;
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    TACO                                    */
+/* -------------------------------------------------------------------------- */
+
+    #products {
+
+        .cardProductTaco {
+            width: 48%;
+        }
+    }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    BOX                                     */
+/* -------------------------------------------------------------------------- */
+
+    #products {
+
+        .cardProductBox {
+            width: 48%;
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    MENU                                    */
+/* -------------------------------------------------------------------------- */
+
+    #products {
+
+        .cardProductMenu {
+            width: 48%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+/* -------------------------------------------------------------------------- */
+/*                                   DESKTOP                                  */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                    GOTOP                                   */
+/* -------------------------------------------------------------------------- */
+
+#btnTop {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 100;
+
+    img {
+        width: 25px;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
+
+    header {
+        background-image: url("../../img/bg-header.jpg");
+
+/* -------------------------------------------------------------------------- */
+/*                                  NAV MOBILE                                */
+/* -------------------------------------------------------------------------- */
+
+        #navMobile {
+            display: none;
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                 NAV DESKTOP                                */
+/* -------------------------------------------------------------------------- */
+
+    #subNav {
+        display: flex;
+        justify-content: center;
+        
+        a {
+            margin-right: 10px;
+        }
+
+        .btnSubNav:hover{
+            color: #242424;
+        }
+
+        .btnSubNav {
+            width: 100px;
+            height: 40px;
+            margin-top: 20px;
+            font-size: 15px;
+            display: inline-block;
+            color: white;
+            transition: all 0.4s ease-in-out;
+            padding: 5px;
+            line-height: 2;
+        }
+
+        #btnDynMobile {
+            display: none;
+        }
+    }
+
+    #subNav::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: -5%;
+        left: -5%;
+        height: 120px;
+        background: #1a1a1a;
+        -webkit-clip-path: ellipse(50% 60% at 50% 100%);
+        clip-path: ellipse(50% 20% at 50% 100%);
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                  CONTAINER                                 */
+/* -------------------------------------------------------------------------- */
+
+#category {
+
+    #figBox {
+        background-image: url("../../img/boxDesktop_card.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 452px;
+        height: 273px;
+        margin: 14px 14px 25px 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+    }
+
+    #figMenu {
+        background-image: url("../../img/menuDesktop_card.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 452px;
+        height: 273px;
+        margin: 14px 14px 25px 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   CONTACT                                  */
+/* -------------------------------------------------------------------------- */
+
+    #contact {
+        background: #1a1a1a;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 10% 0 10%;
+
+        .containerContact {
+            width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            article {
+                margin: 30px auto;
+                width: 50%;
+                max-width: 350px;
+                background: #242424;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    text-align: center;
+                    margin: 20px 0 20px 0;
+                }
+
+                a {
+                    margin: 0 auto;
+                }
+
+                .redirection {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                              GALLERY LIGHTBOX                              */
+/* -------------------------------------------------------------------------- */
+
+#fullScreen {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #3b3b3ba9;
+    z-index: 100;
+    opacity: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    .absolute{
+        position: absolute;
+        position: fixed;
+        height: 80%;
+        width: 100%;
+        max-width: 80%;
+        object-fit: contain;
+    }
+
+    #closeBox {
+        position: absolute;
+        top: 40px;
+        right: 45px;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+    }
+
+    #leftBox {
+        position: absolute;
+        left: 50px;
+        cursor: pointer;
+    }
+
+    #rightBox {
+        position: absolute;
+        right: 50px;
+        cursor: pointer;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    ABOUT                                   */
+/* -------------------------------------------------------------------------- */
+
+    .about {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+
+        img {
+            width: 30%;
+        }
+
+        p {
+            width: 50%;
+        }
+    }
+
+    /* -------------------------------------------------------------------------- */
+/*                                   SUSHIS                                   */
+/* -------------------------------------------------------------------------- */
+
+    #products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        margin: auto;
+        background: #1a1a1a;
+        padding: 0 10% 30px 10%;
+
+        .sectionTitle {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            margin: 10px 0 25px 0px;
+
+            h1 {
+                width: 100%;
+                color: white;
+                margin-bottom: 15px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .hrWhite {
+                height: 1px;
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+                width: 150px;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            hr {
+                border: none;
+            }
+        }
+
+        .cardProduct {
+            width: 32%;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            background: #242424;
+            filter: drop-shadow(2px 2px 8px black);
+            border-radius: 8px;
+            margin: 0px 0px 20px 0px;
+            padding: 0 0 10px 0;
+
+            .centerCard {
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                width: 100%;
+
+                img {
+                    height: 150px;
+                    width: 150px;
+                    margin: 20px auto;
+                    filter: drop-shadow(2px 2px 13px black);
+                }
+
+                h3 {
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    padding: 0px 10px;
+                }
+
+                span {
+                    color: rgb(300, 27, 27);
+                    font-family: 'Roboto', sans-serif;
+                    padding: 12px 10px;
+                    font-size: 17px;
+                }
+
+                ul {
+                    width: 100%;
+
+                    li {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 3px 10px;
+
+                        p {
+                            color: white;
+                            font-family: 'Roboto', sans-serif;
+                        }
+                    }
+                }
+            }
+
+            .intelligence {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                padding: 5px 10px 0px 10px;
+            }
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    TACO                                    */
+/* -------------------------------------------------------------------------- */
+
+    #products {
+
+        .cardProductTaco {
+            width: 32%;
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    BOX                                     */
+/* -------------------------------------------------------------------------- */
+
+    #products {
+
+        .cardProductBox {
+            width: 32%;
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    MENU                                    */
+/* -------------------------------------------------------------------------- */
+
+    #products {
+
+        .cardProductMenu {
+            width: 32%;
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    FOOTER                                  */
+/* -------------------------------------------------------------------------- */
+
+    footer {
+
+        #footer {
+            width: 100%;
+            color: white;
+            background-color: #151515;
+            height: 100px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            text-align: center;
+            padding-top: 10px;
+            z-index: 100;
+        }
+    }
+}
+

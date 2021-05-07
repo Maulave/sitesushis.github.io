@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Bienvenu dans notre restaurant Ushimoto ! Nous faisons de la vente en livraison ou a emporté !">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/dist/styles.css">
+    <title>Ushimoto</title>
+</head>
+<body>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                  GOTOP                                  -->
+<!-- ----------------------------------------------------------------------- -->
+
+<div id="btnTop">
+    <img src="img/arrowWhite.png" alt="Flèche pour remonter vers la haut de page" class="imgTop">
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 HEADER                                  -->
+<!-- ----------------------------------------------------------------------- -->
+
+    <header>
+        <div id="logo">
+            <img src="img/logoWhite.png" alt="logoWhite">
+            <a href="index.html"></a>
+        </div>
+
+<!-- ------------------------------- MOBILE -------------------------------- -->
+
+        <div id="navMobile">
+            <a href="#" id="btnMenu" class="btn">
+                <img src="img/imgBurgerMenuWhite.png" alt="îcone burger menu">
+            </a>
+        </div>
+
+        <nav id="fullMenu">
+            <button id="closeFullMenu">
+                <img src="img/croixWhite.png" alt="">
+            </button>
+            <ul>
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Galerie</a>
+                </li>
+                <li>
+                    <a href="about.html">À propos</a>
+                </li>
+            </ul>
+            <div id="socialMedia">
+                <a href="#">
+                    <img src="img/facebookWhite.png" alt="lien vers le facebook d'Ushimoto">
+                </a>
+                <a href="#">
+                    <img src="img/twitterWhite.png" alt="lien vers le facebook d'Ushimoto">
+                </a>
+                <a href="#">
+                    <img src="img/instagramWhite.png" alt="lien vers le facebook d'Ushimoto">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+<!-- ------------------------------- DESKTOP -------------------------------- -->
+
+    <section id="subNav">
+        <a href="index.html" id="btnDynMobile" class="btn btnSubNav">RETOUR</a>
+        <a href="index.html" class="btn btnSubNav btnSubNavDesktop">ACCUEIL</a>
+        <a href="contact.html" class="btn btnSubNav btnSubNavDesktop">CONTACT</a>
+        <a href="gallery.html" class="btn btnSubNav btnSubNavDesktop">GALERIE</a>
+        <a href="about.html" class="btn btnSubNav btnSubNavDesktop">À PROPOS</a>
+    </section>
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                CONTAINER                                -->
+<!-- ----------------------------------------------------------------------- -->
+
+    <section id="products">
+
+<!-- -------------------------------- TITLE -------------------------------- -->
+    
+        <div class="sectionTitle">
+            <h1>Nos Menu</h1>
+            <hr class="hrWhite">
+        </div>
+
+<!-- ------------------------------- Sushis -------------------------------- -->
+
+        <div class="cardProductMenu">
+            <div class="centerCard">
+                <img src="img/maki_1.png" alt="Sushis Ushimoto">
+                <h3>Maki</h3>
+                <ul>
+                    <li><p>Accompagnement + Bowl + boisson*</p><p>16.50</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cardProductMenu">
+            <div class="centerCard">
+                <img src="img/sushi_1.png" alt="Sushis Ushimoto">
+                <h3>California</h3>
+                <ul>
+                    <li><p>Accompagnement + Bowl + boisson*</p></li>
+                    <li><p>Tako Veggie ou Karaage</p><p>14.50</p></li>
+                    <li><p>Tako tropical ou Atlas</p><p>16.50</p></li>
+                </ul>
+            </div>
+            <p class="intelligence">*Mangajo ou Ginger Ale 1.50 €</p>
+        </div>
+
+        <div class="cardProductTaco">
+            <div class="center centerCard">
+                <h3>Étudiants</h3>
+                <ul>
+                    <li><p class="center">-10% pour les étudiants</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 FOOTER                                  -->
+<!-- ----------------------------------------------------------------------- -->
+
+    <footer>
+        <section id="prefooter">
+            <article id="footerLogo">
+                <img src="img/logoWhite.png" alt="Logo Ushimoto">
+            </article>
+            <article id="footerSocialMedia" class="center">
+                <a href="https://www.facebook.com/yokofusion">
+                    <img src="img/facebookWhite.png" alt="lien vers le facebook d'Ushimoto">
+                </a>
+                <a href="#">
+                    <img src="img/twitterWhite.png" alt="lien vers le facebook d'Ushimoto">
+                </a>
+                <a href="https://www.instagram.com/yokofusion/">
+                    <img src="img/instagramWhite.png" alt="lien vers le facebook d'Ushimoto">
+                </a>
+            </article>
+        </section>
+        <section id="footer">
+            <span>© Ushimoto</span>
+            <span>Developped by maulave.julien74@gmail.com</span>
+        </section>
+    </footer>
+
+<script type="text/javascript" src="js/gallery.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/closeBurger.js"></script>
+</body>
+</html>
